@@ -1,5 +1,6 @@
 *🏴󠁧󠁢󠁥󠁮󠁧󠁿English🏴󠁧󠁢󠁥󠁮󠁧󠁿*
-*🇺🇦Ukrainian🇺🇦 description below*
+
+(*🇺🇦Ukrainian🇺🇦 description below*)
 
 # Ukrainian Bible QA chat-bot👼
 
