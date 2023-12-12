@@ -48,7 +48,7 @@ st.title("Відповіді на питання по Біблії👼")
 
 @st.cache_resource(show_spinner=False)
 def load_data():
-    with st.spinner(text="Loading..."):
+    with st.spinner(text="Вантажу текст Біблії, чекай..."):
         loader = TextLoader("bible.txt")
         documents = loader.load()
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=1150, chunk_overlap=150, length_function = len,
@@ -56,7 +56,13 @@ def load_data():
                                                        )
         text_chunks = text_splitter.split_documents(documents)
         embeddings = OpenAIEmbeddings()
-        vectorstore = FAISS.from_documents(text_chunks, embeddings)
+        vectorstore_filename = "vectorstore/bible_vectors"
+        if os.path.isfile(vectorstore_filename):
+            vectorstore = FAISS.load_local(vectorstore_filename, embeddings)
+        else:
+            vectorstore = FAISS.from_documents(text_chunks, embeddings)
+            vectorstore.save_local(vectorstore_filename)
+        
         return vectorstore.as_retriever()
         
 
