@@ -3,7 +3,7 @@
 ## Description
 
 The chat-bot utilises LLMs with conversation memory and document retrieval.
-This demo project is made of part of Fall 23' UCU NLP course.
+This demo project was made as part of Fall 23' UCU NLP course.
 
 ## How to use
 
