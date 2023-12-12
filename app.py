@@ -51,7 +51,7 @@ def load_data():
     with st.spinner(text="Loading..."):
         loader = TextLoader("bible.txt")
         documents = loader.load()
-        text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=150, length_function = len,
+        text_splitter = RecursiveCharacterTextSplitter(chunk_size=1150, chunk_overlap=150, length_function = len,
                                                        separators=[" ", ",", "\n"]
                                                        )
         text_chunks = text_splitter.split_documents(documents)
