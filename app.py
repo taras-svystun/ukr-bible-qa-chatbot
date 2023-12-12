@@ -56,7 +56,7 @@ def load_data():
                                                        )
         text_chunks = text_splitter.split_documents(documents)
         embeddings = OpenAIEmbeddings()
-        vectorstore_filename = "vectorstore/bible_vectors"
+        vectorstore_filename = "bible_vectors"
         if os.path.isfile(vectorstore_filename):
             vectorstore = FAISS.load_local(vectorstore_filename, embeddings)
         else:
