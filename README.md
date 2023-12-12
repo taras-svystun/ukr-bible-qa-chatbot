@@ -1,10 +1,13 @@
-*Ukrainian description below*
+*🏴󠁧󠁢󠁥󠁮󠁧󠁿English🏴󠁧󠁢󠁥󠁮󠁧󠁿*
+*🇺🇦Ukrainian🇺🇦 description below*
 
 # Ukrainian Bible QA chat-bot👼
 
 The chat-bot utilises LLMs with conversation memory and document retrieval.
 
 This demo project is made of part of Fall 23' UCU NLP course.
+
+*🇺🇦Ukrainian🇺🇦*
 
 # Україномовний чатбот з відповідями по Біблії👼
 

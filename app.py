@@ -38,7 +38,7 @@ def clear_chat_history():
 with st.sidebar:
     st.info('Це чатбот, який має доступ до всього тексту Біблії та може відповідати на запитання.', icon="ℹ️")
     st.write("Цю демку створив [Тарас Свистун](https://github.com/taras-svystun).")
-    # st.write('Поглянути на код застосунку можна [тут]().')
+    st.write('Поглянути на код застосунку можна [тут](https://github.com/taras-svystun/ukr-bible-qa-chatbot).')
     st.write("Текст Біблії в українському перекладі було взято [звідси](https://www.jw.org/uk/бібліотека/біблія/nwt/книги/).")
     st.button(":red[Стерти історію чату]", on_click=clear_chat_history)
 
@@ -52,7 +52,7 @@ def load_data():
         loader = TextLoader("bible.txt")
         documents = loader.load()
         text_splitter = RecursiveCharacterTextSplitter(chunk_size=2000, chunk_overlap=150, length_function = len,
-                                                    #    separators=[" ", ",", "\n"]
+                                                       separators=[" ", ",", "\n"]
                                                        )
         text_chunks = text_splitter.split_documents(documents)
         embeddings = OpenAIEmbeddings()
