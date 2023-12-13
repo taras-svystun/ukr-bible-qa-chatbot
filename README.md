@@ -25,7 +25,7 @@ Clone this repo and run the app locally. Step by step instructions below.
 
 ## Possible further improvements
 
-1. Add the language selection option.
+1. Add language selection option.
 
 2. Try different vectorstore.
 
